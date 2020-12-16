@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const db = require('./models')
 db.sequelize.sync()
-const port = procces.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 const pg = require('pg')
 const app = express()
 
