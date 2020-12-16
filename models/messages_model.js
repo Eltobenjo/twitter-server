@@ -3,9 +3,6 @@ module.exports = (sequelize, Sequelize) => {
 		text: {
 			type: Sequelize.STRING,
 		},
-		user_id: {
-			type: Sequelize.STRING,
-		},
 	})
 
 	return Message

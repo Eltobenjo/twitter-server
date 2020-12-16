@@ -7,7 +7,7 @@ exports.create = (req, res) => {
 	// Create a Message
 	const messages = {
 		text: req.body.text,
-		user_id: req.body.user_id,
+		userId: req.body.userId,
 	}
 
 	// Save User in the database
@@ -46,6 +46,23 @@ exports.findOne = (req, res) => {
 		.catch((err) => {
 			res.status(500).send({
 				message: 'Error retrieving message with id=' + id,
+			})
+		})
+}
+
+exports.findOneMessages = (req, res) => {
+	const id = req.params.id
+	Message.findAll({
+		where: {
+			userId: id,
+		},
+	})
+		.then((data) => {
+			res.send(data)
+		})
+		.catch((err) => {
+			res.status(500).send({
+				message: err.message || 'Some error occurred while retrieving message.',
 			})
 		})
 }

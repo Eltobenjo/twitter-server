@@ -1,5 +1,6 @@
 module.exports = (app) => {
 	const users = require('../controllers/users_controller.js')
+	const messages = require('../controllers/messages_controller.js')
 
 	var router = require('express').Router()
 
@@ -10,7 +11,7 @@ module.exports = (app) => {
 
 	router.get('/:id', users.findOne)
 
-	//router.get('/:id/messages', users.findOneMessages)
+	router.get('/:id/messages', messages.findOneMessages)
 
 	app.use('/users', router)
 }
