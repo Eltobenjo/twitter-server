@@ -14,5 +14,6 @@ app.get('/', (req, res) => {
 	res.json({ message: 'This works!.' })
 })
 require('./routes/users_routes')(app)
+require('./routes/messages_routes')(app)
 
 app.listen(4000, () => console.log('up on 4000'))
