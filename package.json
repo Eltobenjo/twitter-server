@@ -4,17 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-		"start": "node index",
-		"dev": "nodemon index"
-	},
-  
+    "start": "node index",
+    "dev": "nodemon index"
+  },
   "author": "Elton benjamin\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[B",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "pg": "^8.5.1",
     "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
