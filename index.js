@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const db = require('./models')
 db.sequelize.sync()
+const port = procces.env.PORT || 4000;
 const pg = require('pg')
 const app = express()
 
@@ -16,4 +17,4 @@ app.get('/', (req, res) => {
 require('./routes/users_routes')(app)
 require('./routes/messages_routes')(app)
 
-app.listen(4000, () => console.log('up on 4000'))
+app.listen(port, () => console.log(`${port}`))
